@@ -7,4 +7,4 @@ edition = "2021"
 
 [dependencies]
 yaml-rust = "0.4"
-libultra = {path = "../../../n64_rust_libs/libultra"}
+libultra = {git = "https://github.com/MittenzHugg/libultra_rs", branch="main"}
