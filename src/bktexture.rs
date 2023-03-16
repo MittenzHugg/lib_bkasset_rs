@@ -25,7 +25,7 @@ impl BKTexture<IA16> {
     }
 
     pub fn to_be_bytes(&self)->Vec<u8>{
-        self.tmem.iter().flatten().map(|color| color.to_be_bytes()).flatten().collect()
+        self.tmem.iter().flatten().flat_map(IA16::to_be_bytes).collect()
     }
 }
 
@@ -42,7 +42,7 @@ impl BKTexture<RGBA16> {
     }
 
     pub fn to_be_bytes(&self)->Vec<u8>{
-        self.tmem.iter().flatten().map(|color| color.to_be_bytes()).flatten().collect()
+        self.tmem.iter().flatten().flat_map(RGBA16::to_be_bytes).collect()
     }
 }
 
@@ -59,7 +59,7 @@ impl BKTexture<RGBA32> {
     }
 
     pub fn to_be_bytes(&self)->Vec<u8>{
-        self.tmem.iter().flatten().map(|color| color.to_be_bytes()).flatten().collect()
+        self.tmem.iter().flatten().flat_map(RGBA32::to_be_bytes).collect()
     }
 }
 

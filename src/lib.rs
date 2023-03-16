@@ -3,6 +3,7 @@ pub mod bkstring;
 pub mod bkmodel;
 pub mod bktexture;
 pub mod pixels;
+pub mod error;
 
 #[derive(PartialEq, Debug, Copy, Clone)]
 pub enum ImgFmt{
